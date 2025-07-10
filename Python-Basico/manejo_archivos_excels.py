@@ -108,3 +108,47 @@ for row in hoja.iter_rows(min_row=2):
 #luego ingresa los valores de todos los trimestres de un año
 
 #Luego muestra las ventas totales de cada trimestre
+
+
+# Crear un nuevo libro de trabajo
+workbook_trimestral = Workbook()
+hoja_trimestral = workbook_trimestral.active
+hoja_trimestral.title = "Ventas Trimestrales"
+
+# Encabezados
+hoja_trimestral["A1"] = "Trimestre"
+hoja_trimestral["B1"] = "Ventas Totales"
+
+# Aplicar estilo de negrita a los encabezados
+hoja_trimestral["A1"].font = Font(bold=True)
+hoja_trimestral["B1"].font = Font(bold=True)
+
+# Datos de ventas trimestrales
+ventas_trimestrales = [
+    ["Primer Trimestre", 15000],
+    ["Segundo Trimestre", 22000],
+    ["Tercer Trimestre", 18000],
+    ["Cuarto Trimestre", 25000],
+]
+
+# Insertar los datos en la hoja
+for row_data in ventas_trimestrales:
+    hoja_trimestral.append(row_data)
+
+# Guardar el archivo
+workbook_trimestral.save("./Python-Basico/ventas_trimestrales.xlsx")
+
+print("Archivo 'ventas_trimestrales.xlsx' creado exitosamente.")
+
+# --- Leer y mostrar el contenido del archivo ---
+
+# Cargar el archivo de Excel
+book_loaded = load_workbook("./Python-Basico/ventas_trimestrales.xlsx")
+hoja_loaded = book_loaded.active
+
+print("\n--- Ventas Totales por Trimestre ---")
+# Iterar sobre las filas, comenzando desde la segunda fila para omitir los encabezados
+for row in hoja_loaded.iter_rows(min_row=2):
+    trimestre = row[0].value
+    ventas_totales = row[1].value
+    print(f"{trimestre}: ${ventas_totales:,}")
