@@ -10,6 +10,7 @@
 
 #Importamos sqlite3 para trabajar con bases de datos SQLite 
 import sqlite3
+
 #Establecer la conexion a mi base de datos
 conn = sqlite3.connect("./Python_especializado/SQLite/example_DB.db")
 
