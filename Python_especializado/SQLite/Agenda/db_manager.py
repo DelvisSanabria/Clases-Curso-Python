@@ -35,7 +35,7 @@ class DBManager:
                             id INTEGER PRIMARY KEY AUTOINCREMENT,
                             name TEXT NOT NULL,
                             phone TEXT UNIQUE NOT NULL,
-                            email TEXT NOT NULL
+                            email TEXT NOT NULL,
                           )
                           """)
       self.conn.commit()
@@ -175,20 +175,20 @@ class DBManager:
 if __name__ == "__main__":
   manager = DBManager()
   manager.connect()
-  #manager.create_table() #Ejecutenlo 1 sola vez
+  manager.create_table() #Ejecutenlo 1 sola vez
   
   #Insert
-  #manager.insert_contact("Herasi","12312133445678","Herasi777@gmail")
-  #manager.insert_contact("Cris","135652345678","crissivira9@gmail")
-  #manager.insert_many_contacts([("Herasi","1234768585678","Herasi777@gmail"),("Cris","12343645755678","crissivira9@gmail"),("Delvis","127898089345678","delvissivira9@gmail")])
+  manager.insert_contact("Herasi","12312133445678","Herasi777@gmail")
+  manager.insert_contact("Cris","135652345678","crissivira9@gmail")
+  manager.insert_many_contacts([("Herasi","1234768585678","Herasi777@gmail"),("Cris","12343645755678","crissivira9@gmail"),("Delvis","127898089345678","delvissivira9@gmail")])
   
   #Read
-  #print(manager.read_contacts())
-  #print(manager.search_contact("name","Cris"))
+  print(manager.read_contacts())
+  print(manager.search_contact("name","Cris"))
   
   #Update
-  manager.update_contact(1,new_name="PaulaOne",new_email="pauDeveloper9@gmail")
+  manager.update_contact(1,new_name="PaulaTheRevolution",new_email="paulaDev25@gmail")
   
   #Delete
-  #manager.delete_contact(3)
+  manager.delete_contact(3)
   manager.close()
