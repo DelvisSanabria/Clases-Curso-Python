@@ -19,11 +19,26 @@ else:
   print(f"Error al obtener los datos del Pokémon: {response.status_code}")
   
   
-  #Opcional:Crearse una cuenta en OpenWeatherMap y obtener una API Key, para pintar los datos del clima de una ciudad.
+#Opcional:Crearse una cuenta en OpenWeatherMap y obtener una API Key, para pintar los datos del clima de una ciudad.
   
   
 #https://openweathermap.org/api
 
-API_KEY = "tu_api_key"
-city = "Madrid"
-url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric"
+API_KEY = "83c6746c66c8f1e4161a00e50d680d25"
+city = "Caracas"
+
+Latitude= 10.4806
+
+Longitude= 66.9036
+url = f"https://api.openweathermap.org/data/2.5/weather?lat={Latitude}&lon={Longitude}&appid={API_KEY}"
+
+response = requests.get(url)
+data = response.json()
+
+if response.status_code == 200:
+    climate = data["weather"][0]["description"].capitalize()
+    temp = data["main"]["temp"]
+    print(f"Clima en {city}: {climate}")
+    print(f"Temperatura: {temp}°C")
+else:
+    print("Error al obtener datos.")
