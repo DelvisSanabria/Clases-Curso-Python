@@ -1,8 +1,7 @@
 import sqlite3
-import os
 
 # Definimos la ruta de la base de datos
-DATABASE_NAME = './Python_Backend/flaks-sqlite/agenda.db'
+DATABASE_NAME = './Python-Backend/flaks-sqlite/agenda.db'
 
 #crear un metodo para obtener la conexion a la base de datos
 def get_db_connection():
