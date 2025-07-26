@@ -148,5 +148,3 @@ def delete_contact(contact_id):
     return jsonify({"error": "Error al eliminar el contacto"}), 500
   finally:
     conn.close()
-  
-  
