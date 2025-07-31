@@ -1,36 +1,37 @@
 import sqlite3
-import os
 #Nos sirve para encriptar la contraseña y posteriormente desencriptarla
 from werkzeug.security import generate_password_hash, check_password_hash
+import os 
+from dotenv import load_dotenv
+load_dotenv()
 
-DATABASE = "./Python-Backend/flask-login-auth-register/database.db"
-
+db = os.getenv("DATABASE")
 #Inicializamos nuestra base de datos
 def init_db():
-  conn = sqlite3.connect(DATABASE)
+  conn = sqlite3.connect(db)
   cursor = conn.cursor()
   #Crear la tabla de usuarios
-  cursor.execute("""
+  cursor.execute('''
   CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     email TEXT NOT NULL UNIQUE,
     username TEXT NOT NULL UNIQUE,
-    password TEXT NOT NULL,
+    password TEXT NOT NULL
   )
-  """)
+  ''')
   #Guardamos los cambios
   conn.commit()
   #Cerramos la conexion
   conn.close()
   print(
-    f"Base de datos inicializada en {DATABASE} con exito"
+    f"Base de datos inicializada en {db} con exito"
   )
   
 #Crear un usuario
 
 def create_user(email, username, password):
   try:
-    conn = sqlite3.connect(DATABASE)
+    conn = sqlite3.connect(db)
     cursor = conn.cursor()
     
     #hashear mi contraseña
@@ -50,14 +51,14 @@ def create_user(email, username, password):
     conn.close()
     
 def verify_user(email, password):
-  conn = sqlite3.connect(DATABASE)
+  conn = sqlite3.connect(db)
   cursor = conn.cursor()
   
-  cursor.execute("SELECT * FROM users WHERE email = ?", (email))
+  cursor.execute("SELECT id, password FROM users WHERE email = ?", (email,))
   user = cursor.fetchone()
   conn.close()
   
   if user and check_password_hash(user[1], password):
     return user[0]
-  else:
-    return None
+ 
+  return None
