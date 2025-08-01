@@ -3,6 +3,8 @@ from auth import auth_bp
 from flask_jwt_extended import JWTManager, get_jwt_identity, jwt_required
 import database
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 app = Flask(__name__)
 

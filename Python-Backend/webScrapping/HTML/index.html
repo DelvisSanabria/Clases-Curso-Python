@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+  </head>
+  <body>
+    <!-- La etiqueta H1 es un titulo, solo debe de haber 1 en toda la pagina -->
+    <h1 class="superTitulo" >Esto es un super titulo</h1>
+    <!-- la etiqueta H2 es un subtitulo y puedo tener tantos como necesite -->
+    <h2>Esto es un super subtitulo</h2>
+    <!-- La etiqueta H3 es un subtitulo de un subtitulo, puedo tener tantos como necesite -->
+    <h3>Esto es un super texto</h3>
+    <!-- La etiqueta H4 es un subtitulo de un subtitulo de un subtitulo, puedo tener tantos como necesite -->
+    <h4 style="color: cadetblue;">una super negrita importante</h4>
+    <p id="superParrafo">Esto es un super parrafo</p>
+    <!-- Podemos pintar hipervinculos con la etiqueta anchor "a" -->
+     <a href="https://lexpin.online" target="_blank">
+        Esto es un hipervinculo
+     </a>
+     <!-- la etiqueta img es para insertar imagenes -->
+     <img class="perrito" id="perrito" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRWE-xaE7vdoHvKTNxWW7plfVUhUvPckMkWw&s" alt="perrito-fachero" width="200" height="200"/>
+    <!-- la etiqueta span es para insertar texto suelto o corto -->
+     <span class="superSpan" id="textoSpan">Esto es un span</span>
+     <!-- la etiqueta ol es para insertar listas ordenadas -->
+     <ol class="List">
+       <li>Esto es un elemento de lista</li>
+       <li class="List">esto otro elemento</li>
+       <li class="List">Este es un tercer elemento</li>
+       <li class="List">Es un cuarto elemento</li>
+     </ol>
+    <!-- la etiqueta ul es para insertar listas desordenadas -->
+     <ul id="List">
+       <li>Esto es un elemento de lista</li>
+       <li class="List">esto otro elemento</li>
+       <li class="List">Este es un tercer elemento</li>
+       <li class="List">Es un cuarto elemento</li>
+     </ul>
+
+     <!-- la etiqueta button es para insertar botones -->
+
+     <button type="button" onclick="alert('Esto es un boton')" style="border-radius: 30%; padding: 10px;">Esto es un boton</button>
+
+     <!-- La etiqueta br es para insertar saltos de linea -->
+     <p id="parrafo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi obcaecati nam laudantium id quia voluptas fugit corporis adipisci non sequi, nostrum nesciunt ad aperiam doloribus impedit optio necessitatibus unde ab! Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> In unde ad natus non? Blanditiis hic impedit maiores animi alias quas, dolores fugiat, praesentium dignissimos illo iure eveniet! Nisi, maxime saepe! Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Inventore ipsa similique et minus, suscipit ex vel aperiam praesentium amet provident! Quibusdam nemo qui temporibus dolor vel maxime, atque sed rem! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus voluptatibus eaque ad sapiente maxime tenetur, laborum enim optio placeat error facilis voluptates laboriosam at ut praesentium rerum in reiciendis quidem.</p>
+
+     <!-- la etiqueta iframe es para insertar un iframe es decir una pagina dentro de otra -->
+     <iframe src="./index2.html" frameborder="0"></iframe>
+
+     <!-- la etiqueta de video es para insertar videos -->
+     <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls autoplay muted
+     ></video>
+
+     <!-- la etiqueta input es para insertar inputs y el usuario pueda insertar informacion -->
+      <label for="name">
+        <!-- la etiqueta label es para insertar etiquetas para los inputs -->
+        Nombre:
+        <input type="text" name="name" required>
+      </label>
+      <label for="phone">
+        Telefono:
+        <input type="tel" name="phone">
+      </label>
+      <input type="number">
+      <input type="email">
+      <input type="password" placeholder="Contraseña">
+      <input type="file">
+      <input type="date">
+      <input type="checkbox">
+      <input type="radio">
+      <input type="range" min="10" max="100" value="50" step="5" name="edad">
+
+      <!-- la etiqueta textarea es para insertar textareas -->
+       <textarea name="adress" id="adress" placeholder="Dinos tu direccion"></textarea>
+
+       <!-- la etiqueta select es para insertar selectores -->
+       <select name="select" id="select" required>
+         <option value="1">Opcion 1</option>
+         <option value="2">Opcion 2</option>
+         <option value="3">Opcion 3</option>
+         <option value="4">Opcion 4</option>
+         <option value="5">Opcion 5</option>
+       </select>
+
+       <!-- la etiqueta div es un divisor de elementos -->
+        <div>
+          <h2>Esto es un div</h2>
+          <p>Esto es un parrafo medio largo</p>
+        </div>
+
+        <!-- la etiqueta section nos sirve para agrupar elementos de una seccion -->
+         <section>
+           <h2>Esto es una seccion</h2>
+           <p>Esto es un parrafo medio largo</p>
+         </section>
+  </body>
+</html>
