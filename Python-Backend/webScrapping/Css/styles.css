@@ -1,0 +1,23 @@
+*{
+  font-size: 1.2rem;
+}
+
+nav section{
+  color: rgb(92, 88, 87);
+}
+
+nav section[class="section"]{
+  background-color: rgb(133, 137, 138);
+}
+
+section[class="section"]{
+  color: aqua;
+}
+
+ul>li {
+  list-style-type: none;
+}
+
+.logo{
+  width: 30px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario</title>
+  <style>
+    h1{
+      color: rgb(188, 108, 11);
+    }
+    #last-name{
+      color: blueviolet;
+      font-size: larger;
+    }
+    label{
+      background-color: rgb(3, 34, 34);
+    }
+    .form{
+      background-color: rgb(119, 239, 231);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Este es mi super fomulario</h1>
+    <form action="" class="form">
+      <label for="name" style="color: aqua;">Nombre:</label>
+      <input type="text" name="name" id="name">
+      <label for="last-name" id="last-name">Apellido:</label>
+      <input type="text" name="last-name" id="last-name">
+      <!-- la primera forma de tener un boton de envio es utilizando un input de tipo envio -->
+
+      <!-- <input type="submit"> -->
+
+       <!-- la segunda forma de tener un boton de envio es utilizando un boton con el tipo de envio-->
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+</body>
+</html>
