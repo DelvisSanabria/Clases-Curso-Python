@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: rgb(69, 67, 65);
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+body{
+  background-color: bisque;
+  /* background: url("https://i.pinimg.com/736x/00/77/9b/00779bb4627c79581950e8dd1dd61c74.jpg"); */
+  /* background-image: url("https://i.pinimg.com/736x/00/77/9b/00779bb4627c79581950e8dd1dd61c74.jpg"); */
+
+  /* backdrop-filter: blur(10px); */
+}
+
+header{
+  margin: 10px 25px;
+  /* margin-top: 25px; */
+}
+
+.navbar{
+  padding: 10px 25px;
+}
+
+li{
+  font-weight: 100;
+}
+
+#title{
+  text-align: center;
+  line-height: 5rem;
+  text-shadow: 2px 2px 1px #23222237;
+  font-size: 2.5rem;
+}
+
+p{
+  font-size: 2rem;
+  font-weight: 200;
+  text-align: center;
+}
+
+.text{
+  text-decoration: underline;
+  line-height: 5.3rem;
+}
+
+button{
+  background-color: rgb(194, 196, 189);
+  color: rgb(10, 33, 33);
+  width: 200px;
+  height: 100px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 2px 2px 1px #23222237;
+  cursor: pointer;
+}
+
+.circle{
+  background-color: aqua;
+  width: 20vw;
+  height: 20vh;
+  box-shadow: 2px 2px 1px #23222237;
+  border: 1px solid #23222237;
+  border-radius: 100%;
+}
+
+.circle-opacity{
+  background-color: aqua;
+  width: 20vw;
+  height: 20vh;
+  box-shadow: 2px 2px 1px #23222237;
+  border: 1px solid #23222237;
+  border-radius: 100%;
+  opacity: 0.3;
+}
+
+.overflow{
+  height: 200px;
+  overflow: auto
+}
