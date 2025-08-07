@@ -1,0 +1,76 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+  height: 100vh;
+  gap: 20px;
+}
+
+.title:hover{
+  color: rgb(47, 170, 168);
+  cursor: pointer;
+
+}
+
+p:nth-child(even){
+  color: rgb(47, 170, 168);
+}
+
+p:last-child{
+  color: rgb(170, 98, 47);
+}
+
+#name{
+  padding: 10px;
+  outline: none;
+  border: none;
+  background-color: bisque;
+  border-radius: 10px;
+  color: #1e1c1c;
+}
+
+#name:focus{
+  background-color: #252424;
+  color: rgb(47, 170, 168);
+}
+
+#disable:disabled{
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  background-color: #252424;
+  color: rgb(47, 170, 168);
+}
+
+input[type="checkbox"]:checked{
+  border: 1px solid rgb(170, 47, 47);
+}
+
+.btn{
+  background-color: bisque;
+  color: #1e1c1c;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover{
+  background-color: #252424;
+  color: rgb(47, 170, 168);
+  cursor: pointer;
+}
+
+.btn:active{
+  background-color: #2e96a1;
+  color: rgb(177, 190, 190);
+  scale: 1.1;
+}

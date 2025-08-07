@@ -1,0 +1,45 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.3rem;
+}
+
+body{
+  width: 100%;
+}
+
+.box{
+  width: 100%;
+  background-color: bisque;
+  border: 2px solid #23222237;
+  padding: 10px;
+}
+
+.grid-areas{
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  grid-template-rows: 100px repeat(3, 1fr) 100px;
+  grid-template-areas: 
+  "header header"
+  "article sidebar"
+  "article sidebar"
+  "article sidebar"
+  "footer footer";
+}
+
+#header{
+  grid-area: header;
+}
+
+#article{
+  grid-area: article;
+}
+
+#sidebar{
+  grid-area: sidebar;
+}
+
+#footer{
+  grid-area: footer;
+}

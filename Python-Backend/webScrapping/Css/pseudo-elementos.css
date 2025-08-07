@@ -1,0 +1,54 @@
+.title{
+  position: relative;
+}
+/* El pseudo-elemento before nos sirve
+para agregar contenido justo antes del contenido 
+del elemento */
+
+/* .title::before{
+  content: "";
+  width: 100px;
+  height: 3px;
+  background-color: rgb(255, 115, 0);
+  position: absolute;
+  bottom: 0;
+  left: 8%;
+  border-radius: 100px;
+  transform: translateX(-50%);
+} */
+
+.title::before{
+  content: "🤓";
+}
+
+/* El pseudo-elemento after nos sirve para agregar contenido justo despues del contenido del elemento */
+
+.after{
+  position: relative;
+}
+
+.after::after{
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: rgb(255, 115, 0);
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  border-radius: 100px;
+  transform: translateX(-50%);
+}
+
+.first-letter::first-letter{
+  color: red;
+  font-size: 40px;
+}
+
+.first-line::first-line{
+  color: rgb(255, 115, 0);
+  font-size: 20px;
+}
+
+::selection{
+  background-color: rgb(186, 122, 69);
+}
