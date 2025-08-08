@@ -1,0 +1,56 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: bisque;
+  width: 100%;
+  height: 100vh;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%
+}
+
+.box{
+  display: flex;
+  place-content: center;
+  place-items: center;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(50, 50, 112);
+  color: white;
+
+  /* La propiedad transform nos sirve para aplicar una transformacion a un elemento especifico */
+
+  /* transform: rotate(45deg); */
+ /*  transform: scale(1.5); */
+ /* transform: translate(100px, 100px); */
+ /* transform: skew(30deg, 30deg); */
+  .btn{
+  padding: 10px 20px;
+  border: none;
+  background-color: rgb(112, 83, 50);
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  /* Esto */
+  /* transition-property: background-color;
+  transition-duration: 1.2s;
+  transition-timing-function: ease-in-out; */
+  /* transition-delay: 1s; */
+  /* Es igual que esto */
+  transition: background-color 1.2s ease-in-out, transform 1.2s ease-in-out;
+}
+
+.btn:hover{
+  background-color: rgb(64, 48, 42);
+  transform: scale(1.2);
+}
+}
