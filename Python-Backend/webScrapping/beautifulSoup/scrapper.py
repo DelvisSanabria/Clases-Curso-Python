@@ -1,7 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
 import os
-
 #Vamos a leer un archivo local en modo solo lectura
 with open("./Python-Backend/webScrapping/beautifulSoup/index.html", "r", encoding="utf-8") as html_file:
   """ Abro mi archivo y lo guardo en una variable """
